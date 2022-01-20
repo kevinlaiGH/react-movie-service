@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Card, Image, Text } from '@geist-ui/core'
+import { Card, Image, Grid , Text} from '@geist-ui/core'
 
 // unit test isFilmOrCinema
 const isFilmOrCinema = (movieId) => {
@@ -8,13 +8,16 @@ const isFilmOrCinema = (movieId) => {
 
 const MovieCard = ({moviesList}) => {
     return (
-        <Card shadow style={{ backgroundColor: 'lightblue', margin: '30px'}}>
-              <Image src={moviesList[0].Poster} height="200px" width="400px" draggable={false} />
-            <h1>{moviesList[0].Title}</h1>
+        <Grid xs={6} style={{ margin: '30px'}}>
+            <Card shadow style={{ backgroundColor: 'lightblue', margin: '30px'}}>
+            <Image src={moviesList[0].Poster} height="200px" width="400px" draggable={false} />
+            <Text h3>{moviesList[0].Title}</Text>
             {moviesList.map(movie => (
-                <h1>{isFilmOrCinema(movie.ID)}: {movie.Price}</h1>
+                <Text h4>{isFilmOrCinema(movie.ID)}: {movie.Price}</Text>
             ))}
         </Card>
+        </Grid>
+
     )
 }
 
