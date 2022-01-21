@@ -18,9 +18,9 @@ function App() {
       }, [])
 
   return (
-    <>
-     <CardSection movies={movies}/>
-    </>
+      <>
+        <CardSection movies={movies}/>
+      </>
   );
 }
 
