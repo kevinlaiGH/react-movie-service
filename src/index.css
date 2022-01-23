@@ -23,7 +23,13 @@ main {
   display: flex;
   flex-wrap: wrap;
 }
-/* #0069f1 */
+
+.post {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #0069f1;
+}
+
 .movie {
   background-color: #0069f1;
   border-radius: 50px;
@@ -77,10 +83,6 @@ main {
   transform: translateY(101%);
   transition: transform 0.3s ease-in;
 }
-
-/* .overview h3 {
-  margin-top: 0;
-} */
 
 .movie:hover .overview {
   transform: translateY(0);

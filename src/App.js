@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getMovies } from "./utils/api";
 import './App.css';
-// import MovieCard from './components/MovieCard'
 import CardSection from './components/CardSection'
 
 function App() {
@@ -19,6 +18,11 @@ function App() {
 
   return (
       <>
+        <div className="post">
+          <h1>
+            Prince's Theatre
+          </h1>
+        </div>
         <CardSection movies={movies}/>
       </>
   );
