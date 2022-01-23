@@ -10,7 +10,6 @@ test('Renders card section', async () => {
             "Title": 'Star Wars: Episode VII - The Force Awakens',
             "Type": "movie",
             "Poster": "https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_SX300.jpg",
-            "Actors": "Harrison Ford, Mark Hamill, Carrie Fisher, Adam Driver",
             "Price": 25
         },
         {
@@ -18,7 +17,6 @@ test('Renders card section', async () => {
             "Title": "Star Wars: Episode VII - The Force Awakens",
             "Type": "movie",
             "Poster": "https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_SX300.jpg",
-            "Actors": "Harrison Ford, Mark Hamill, Carrie Fisher, Adam Driver",
             "Price": 24.7
         }
        ]
