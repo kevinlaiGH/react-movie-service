@@ -5,7 +5,9 @@ This documentation will take a deep dive of my technical choices for building a 
 - axios-retry 
 - React testing-library for testing
 - Postman to test API
-## Available Scripts
+## How to run
+### Netlify
+This web app is deployed to Netlify: https://react-movie-service.netlify.app/
 
 In the project directory, you can run:
 
@@ -17,7 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ### `npm test`
 Runs unit tests for Card Section
 ## Implementation:
-- create-react-app is used because it produces a static build of the application. If there are additional requirements of the user case, it is better to use Webpack and Babel to customize the build configurations.
+- Create-react-app is used because it produces a static build of the application. If there are additional requirements of the user case, it is better to use Webpack and Babel to customize the build configurations.
 - Instead of using class components, React hooks allow could help improving code reuse and composition.
 - Code splitting of React components is the key for separation of concerns. In this case, we have non-visual logic of API calls and the UI components, these need to be separated, so that it makes the code and tests more reusable and maintainable.
 - Utilizing a jagged array of JSON objects as data structure for API calls, it is very convenient to access an element by using index number
@@ -43,7 +45,7 @@ Runs unit tests for Card Section
     ]
 ```    
 
-- For error handling, the axios-retry library is used for intercepting failed requests and retrying them numerous times. In case of axios-retry not working, I have also catch the error after API calls occur. If there is an error on the server side, we will log the error and display it in the webpage, but it might not be the best approach from the perspectives of the user.
+- For error handling, the axios-retry library is used for intercepting failed requests and retrying them numerous times. In case of axios-retry not working, the error on the server side will be caught after API calls occur and be displayed in the webpage, but this might not be the best approach from the perspectives of the user.
 - For unit testing, <CardSection /> component is tested for mocking the API, ensuring this component works as expected.
 
 # Trade offs
