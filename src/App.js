@@ -6,6 +6,7 @@ import CardSection from './components/CardSection'
 function App() {
 
   const [movies, setMovies] = useState([])
+  const [error, setError] = useState(null)
 
   useEffect(() => {
       const getMoviesList = async () => {
@@ -13,8 +14,15 @@ function App() {
 
         setMovies(movies)
       }
-        getMoviesList()
+        getMoviesList().catch( error => setError(error))
       }, [])
+
+  const errorMessage = `hey something is wrong, try refreshing`
+  if (error){
+    return (
+      <h1 style={{textAlign: 'center'}}>{errorMessage}</h1>
+    )
+  }    
 
   return (
       <>
