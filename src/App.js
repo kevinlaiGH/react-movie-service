@@ -4,7 +4,6 @@ import './App.css';
 import CardSection from './components/CardSection'
 
 function App() {
-
   const [movies, setMovies] = useState([])
   const [error, setError] = useState(null)
 

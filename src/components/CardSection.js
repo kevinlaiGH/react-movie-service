@@ -1,8 +1,6 @@
 import * as React from 'react'
 import MovieCard from './MovieCard'
-
-// unit test tpo ensure its working
-const sortingByPrice = (movies) => movies.sort((a, b) => a.Price - b.Price)
+import { sortingByPrice } from '../helpers'
 
 const CardSection = ({movies}) => {
     return (

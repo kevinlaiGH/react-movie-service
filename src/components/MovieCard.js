@@ -1,12 +1,5 @@
 import * as React from 'react'
-
-const isFilmOrCinema = (movieId) => {
-    return movieId.startsWith('cw') ? 'Cinema World' : 'Film World'
-}
-
-const formatPrice = (moviePrice) => {
-    return '$'+ moviePrice.toFixed(2)  
-}
+import {isFilmOrCinema , formatPrice} from '../helpers'
 
 const MovieCard = ({moviesList}) => {
     return (
